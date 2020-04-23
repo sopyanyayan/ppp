@@ -1,0 +1,9 @@
+:local nama "$user";
+:local bot "BOT";
+:local chat "CHAT ID";
+:local ips [/ppp active get [find name=$nama] address];
+:local up [/ppp active get [find name=$nama] uptime];
+:local caller [/ppp active get [find name=$nama] caller-id];
+:local service [/ppp active get [find name=$nama] service];
+:local active [/ppp active print count];
+/tool fetch url="https://api.telegram.org/bot$bot/sendMessage?chat_id=$chat &text=LOGIN%0AUser: $user%0AIP Client: $ips%0ACaller ID: $caller%0AUptime: $up%0ATotal Active: $active%0AService: $service" mode=http keep-result=no;
