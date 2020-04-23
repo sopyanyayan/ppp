@@ -1,5 +1,5 @@
-:local bot "1075922400:AAEzQypbR8Rp9c_u28Fr0UpOZJOKGJKrR-g";
-:local chat "550242591";
+:local bot "BOT ID";
+:local chat "CHAT ID";
 :local service [/ppp secret get [find name=$user] service];
 :local local [/ppp secret get [find name=$user] local];
 :local remote [/ppp secret get [find name=$user] remote];
